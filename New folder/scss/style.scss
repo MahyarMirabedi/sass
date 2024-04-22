@@ -1,0 +1,55 @@
+@import "reset";
+$mydiretion:rtl;
+$fontfamily:vazirmatn;
+$bgcolor: lightblue;
+$textcolor: rgb(5, 139, 0);
+$fontsize: 18px;
+
+.test{
+    direction: $mydiretion;
+    font-family: $fontfamily;
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: $fontsize;
+}
+$tests: eng;
+$fontfamily: eng;
+$direction: ltr;
+$display: block;
+$display: none;
+.tests {
+    @if $tests ==fa {
+        color:$textcolor;
+    }
+
+    @else if $tests ==eng {
+        color: blue;
+    }
+}
+.tests {
+    @if $fontfamily ==tahoma {
+        font-family: Vazirmatn;
+    }
+    @else if $fontfamily ==eng{
+        font-family: sans-serif;
+    }
+}
+.tests{
+    @if $direction ==rtl {
+        direction: rtl;
+    }
+    @else if $direction ==ltr{
+        direction: ltr;
+    }
+}
+.fa {
+    @if $display ==none{
+        display: block;
+    } @else if $display ==block{
+        display: none;
+    }
+}
+
+
+
+
